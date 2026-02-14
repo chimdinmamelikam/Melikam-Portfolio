@@ -1,238 +1,118 @@
-# Robert Garcia - Developer Portfolio
+# Chimdinma Melikam - Portfolio Website
 
-A modern, responsive portfolio website showcasing front-end development skills and projects.
+A modern, responsive portfolio website showcasing my work as a Frontend Developer and WordPress Web Designer.
 
-## 🎯 Project Overview
+🔗 **Live Site:** [chimdinmamelikam.vercel.app](https://chimdinmamelikam.vercel.app/)
 
-This portfolio website was built as part of a capstone project to demonstrate proficiency in:
-- HTML5 semantic markup
-- CSS3 with modern layout techniques (Flexbox & Grid)
-- Vanilla JavaScript for interactivity
-- Responsive design principles
-- Web accessibility best practices
+## About
 
-## ✨ Features
+This portfolio website serves as a digital showcase of my skills, projects, and professional experience in frontend development and WordPress design. The site features a clean, user-friendly design that highlights my ability to create responsive and accessible web experiences.
 
-- **Responsive Design**: Fully responsive across all devices (mobile, tablet, desktop)
-- **Smooth Animations**: Scroll animations and interactive hover effects
-- **Modern UI**: Clean, professional design with dark theme
-- **Accessible**: Built with semantic HTML and ARIA labels
-- **Interactive Navigation**: Smooth scrolling and active section highlighting
-- **Contact Form**: Functional contact form with validation
-- **Project Showcase**: Featured projects with detailed information
-- **Social Links**: Connected social media profiles
+## Features
 
-## 🛠️ Technologies Used
+- **Responsive Design** - Fully optimized for desktop, tablet, and mobile devices
+- **Clean Navigation** - Intuitive menu structure for easy browsing
+- **Project Showcase** - Detailed case studies of selected work with live demos and GitHub links
+- **About Section** - Overview of my skills, experience, and approach to web development
+- **Contact Form** - Easy way for potential clients and collaborators to get in touch
+- **Modern UI** - Contemporary design aesthetic with smooth user interactions
 
+## Tech Stack
+
+- **HTML5** - Semantic markup and structure
+- **CSS3** - Custom styling and animations
+- **JavaScript** - Interactive features and functionality
+- **Bootstrap** - Responsive grid system and components
+- **Git & GitHub** - Version control and collaboration
+- **Vercel** - Deployment and hosting
+
+## Projects Featured
+
+### SweetCrumbs Cakes & Pastries Website
+A collaborative bakery-themed website built with my team Nova, featuring smooth navigation and warm brand aesthetics.
+- [Live Demo](https://sweetcrumbscakes.vercel.app/)
+- [GitHub Repo](https://github.com/chimdinmamelikam/team-nova-collaborative-website)
+
+### TechXHub Landing Page
+Modern e-commerce landing page for premium tech gadgets with focus on conversion optimization.
+- [Live Demo](https://techxhub-landing-page.vercel.app/)
+- [GitHub Repo](https://github.com/chimdinmamelikam/techxhub-landing-page)
+
+### Custom 404 Error Page
+Creative custom error page demonstrating attention to user experience details.
+- [Live Demo](https://custom-404.netlify.app/)
+- [GitHub Repo](https://github.com/chimdinmamelikam/custom-404-page)
+
+### WordPress Projects
+- **Trusted Review Site** - Product review blog with SEO optimization
+- **Creative Digital Brand Site** - Polished WordPress site for web design services
+
+## Skills & Technologies
+
+**Frontend Development:**
 - HTML5
-- CSS3 (Flexbox, Grid, Custom Properties)
-- JavaScript (ES6+)
-- Font Awesome Icons
-- Google Fonts (System fonts for performance)
+- CSS3
+- JavaScript
+- Bootstrap
+- Responsive Design
+- Cross-browser Compatibility
 
-## 📁 Project Structure
+**Tools & Platforms:**
+- Git & GitHub
+- WordPress
+- Vercel
+- Netlify
+
+## Getting Started
+
+To run this project locally:
+
+1. Clone the repository:
+```bash
+git clone https://github.com/chimdinmamelikam/portfolio-website.git
+```
+
+2. Navigate to the project directory:
+```bash
+cd portfolio-website
+```
+
+3. Open `index.html` in your browser or use a local server:
+```bash
+# Using Python
+python -m http.server 8000
+
+# Using Node.js http-server
+npx http-server
+```
+
+4. Visit `http://localhost:8000` in your browser
+
+## Project Structure
 
 ```
-portfolio/
-│
+portfolio-website/
 ├── index.html          # Main HTML file
-├── styles.css          # All CSS styles
-├── script.js           # JavaScript functionality
-├── README.md           # Project documentation
-│
-└── assets/             # Images and other assets (if needed)
+├── css/               # Stylesheets
+├── js/                # JavaScript files
+├── images/            # Project images and screenshots
+└── README.md          # Project documentation
 ```
 
-## 🚀 Getting Started
+## Contact
 
-### Local Development
+**Chimdinma Melikam**  
+Frontend Developer & WordPress Web Designer
 
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/yourusername/portfolio.git
-   cd portfolio
-   ```
+- **Email:** loismelikam@gmail.com
+- **Phone:** +234 806 474 9685
+- **Location:** Abuja, Nigeria
+- **Portfolio:** [chimdinmamelikam.vercel.app](https://chimdinmamelikam.vercel.app/)
 
-2. **Open in browser**
-   - Simply open `index.html` in your web browser
-   - Or use a local server:
-     ```bash
-     # Using Python
-     python -m http.server 8000
-     
-     # Using Node.js
-     npx http-server
-     ```
+## License
 
-3. **View the site**
-   - Navigate to `http://localhost:8000` (or the port shown)
-
-## 📤 Deployment
-
-### Option 1: GitHub Pages
-
-1. **Push to GitHub**
-   ```bash
-   git init
-   git add .
-   git commit -m "Initial commit"
-   git branch -M main
-   git remote add origin https://github.com/yourusername/portfolio.git
-   git push -u origin main
-   ```
-
-2. **Enable GitHub Pages**
-   - Go to your repository on GitHub
-   - Click on "Settings"
-   - Scroll to "Pages" section
-   - Under "Source", select "main" branch
-   - Click "Save"
-   - Your site will be live at: `https://yourusername.github.io/portfolio`
-
-### Option 2: Netlify
-
-1. **Sign up at** [Netlify](https://www.netlify.com/)
-
-2. **Deploy via Drag & Drop**
-   - Drag your project folder to Netlify's deploy zone
-   - Your site will be live instantly!
-
-3. **Or connect to GitHub**
-   - Click "New site from Git"
-   - Connect your GitHub repository
-   - Configure build settings (leave empty for static site)
-   - Click "Deploy site"
-
-4. **Custom Domain (Optional)**
-   - In Netlify dashboard, go to "Domain settings"
-   - Add your custom domain
-   - Follow DNS configuration instructions
-
-### Option 3: Vercel
-
-1. **Install Vercel CLI**
-   ```bash
-   npm install -g vercel
-   ```
-
-2. **Deploy**
-   ```bash
-   vercel
-   ```
-
-3. **Follow prompts** and your site will be live!
-
-## 🎨 Customization
-
-### Colors
-
-Edit the CSS custom properties in `styles.css`:
-
-```css
-:root {
-    --primary-color: #c5f82a;     /* Main accent color */
-    --bg-dark: #0a0a0a;           /* Background color */
-    --text-primary: #ffffff;       /* Main text color */
-    /* ... other colors */
-}
-```
-
-### Content
-
-1. **Personal Information**: Update name, bio, and contact details in `index.html`
-2. **Projects**: Modify project details in the Featured Projects section
-3. **Skills**: Add or remove skills in the About section
-4. **Social Links**: Update href attributes to your social profiles
-5. **Images**: Replace placeholder images with your own
-
-### Fonts
-
-The project uses system fonts by default. To use custom fonts:
-
-1. Add Google Fonts link in `<head>`:
-   ```html
-   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-   ```
-
-2. Update font-family in `styles.css`:
-   ```css
-   body {
-       font-family: 'Inter', sans-serif;
-   }
-   ```
-
-## ✅ Checklist Before Deployment
-
-- [ ] Replace all placeholder content with your information
-- [ ] Update project images and descriptions
-- [ ] Test all links (social media, project links, email)
-- [ ] Verify contact form functionality
-- [ ] Test responsive design on multiple devices
-- [ ] Check browser compatibility
-- [ ] Validate HTML and CSS
-- [ ] Test accessibility with screen readers
-- [ ] Optimize images for web
-- [ ] Add meta tags for SEO
-- [ ] Test site speed with Lighthouse
-
-## 🔧 Browser Support
-
-- Chrome (latest)
-- Firefox (latest)
-- Safari (latest)
-- Edge (latest)
-- Mobile browsers (iOS Safari, Chrome Mobile)
-
-## 📱 Responsive Breakpoints
-
-- Mobile: < 480px
-- Tablet: 481px - 768px
-- Desktop: 769px - 1024px
-- Large Desktop: > 1024px
-
-## ♿ Accessibility Features
-
-- Semantic HTML5 elements
-- ARIA labels for interactive elements
-- Keyboard navigation support
-- Alt text for images
-- Sufficient color contrast
-- Focus indicators
-- Screen reader friendly
-
-## 🐛 Known Issues
-
-None currently. Please report any bugs by creating an issue.
-
-## 📝 Future Enhancements
-
-- [ ] Add blog section
-- [ ] Implement dark/light theme toggle
-- [ ] Add loading animations
-- [ ] Integrate with a CMS
-- [ ] Add testimonials section
-- [ ] Implement contact form backend
-- [ ] Add more project case studies
-- [ ] Create downloadable resume
-
-## 📧 Contact
-
-- **Email**: robert.garcia@example.com
-- **LinkedIn**: [Your LinkedIn](https://linkedin.com/in/yourprofile)
-- **GitHub**: [Your GitHub](https://github.com/yourusername)
-
-## 📄 License
-
-This project is open source and available under the [MIT License](LICENSE).
-
-## 🙏 Acknowledgments
-
-- Design inspiration from Figma community
-- Icons from Font Awesome
-- Images from Unsplash (replace with your own)
+© 2026 Chimdinma Melikam. All rights reserved.
 
 ---
 
-**Built with ❤️ by Robert Garcia**
-
-Last Updated: 2024
+⭐ If you like this project, please consider giving it a star on GitHub!
