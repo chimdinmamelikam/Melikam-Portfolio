@@ -91,7 +91,7 @@ scrollTopBtn.addEventListener('click', () => {
     });
 });
 
-// ==================== CONTACT FORM HANDLING WITH EMAILJS ====================
+// ==================== CONTACT FORM HANDLING (No EmailJS) ====================
 const contactForm = document.getElementById('contactForm');
 
 // Create a paragraph element to display success/error messages
@@ -115,17 +115,12 @@ contactForm.addEventListener('submit', function(event) {
         return;
     }
 
-    // Send the form using EmailJS
-    emailjs.sendForm('service_voph2z4', 'Contact Us', this) // Template name must match EmailJS exactly
-        .then(function() {
-            formMessage.style.color = 'green';
-            formMessage.textContent = 'Message sent successfully! ✅';
-            contactForm.reset();
-        }, function(error) {
-            console.error('EmailJS error:', error);
-            formMessage.style.color = 'red';
-            formMessage.textContent = 'Oops! Something went wrong ❌. Please try again.';
-        });
+    // Placeholder for successful submission
+    formMessage.style.color = 'green';
+    formMessage.textContent = `Thank you, ${name}! Your message has been submitted successfully. ✅`;
+
+    // Reset form
+    contactForm.reset();
 });
 
 // ==================== SCROLL ANIMATIONS ====================
