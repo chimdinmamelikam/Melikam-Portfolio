@@ -91,27 +91,40 @@ scrollTopBtn.addEventListener('click', () => {
     });
 });
 
-// ==================== CONTACT FORM HANDLING ====================
+// ==================== CONTACT FORM HANDLING WITH EMAILJS ====================
 const contactForm = document.getElementById('contactForm');
 
-contactForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-    
-    // Get form values
-    const name = document.getElementById('name').value;
-    const email = document.getElementById('email').value;
-    const message = document.getElementById('message').value;
-    
+// Create a paragraph to show messages under the form
+let formMessage = document.createElement('p');
+formMessage.id = 'formMessage';
+formMessage.style.marginTop = '10px';
+contactForm.appendChild(formMessage);
+
+contactForm.addEventListener('submit', function(event) {
+    event.preventDefault(); // prevent default submission
+
     // Basic validation
-    if (name && email && message) {
-        // In a real application, you would send this data to a server
-        alert(`Thank you, ${name}! Your message has been sent. I'll get back to you soon at ${email}.`);
-        
-        // Reset form
-        contactForm.reset();
-    } else {
-        alert('Please fill in all fields.');
+    const name = document.getElementById('name').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const message = document.getElementById('message').value.trim();
+
+    if (!name || !email || !message) {
+        formMessage.style.color = 'red';
+        formMessage.textContent = 'Please fill in all fields.';
+        return;
     }
+
+    // Send email with EmailJS
+    emailjs.sendForm('service_voph2z4', 'contact_us', this)
+        .then(function() {
+            formMessage.style.color = 'green';
+            formMessage.textContent = 'Message sent successfully! ✅';
+            contactForm.reset();
+        }, function(error) {
+            console.error('EmailJS error:', error);
+            formMessage.style.color = 'red';
+            formMessage.textContent = 'Oops! Something went wrong ❌. Please try again.';
+        });
 });
 
 // ==================== SCROLL ANIMATIONS ====================
@@ -146,7 +159,6 @@ document.querySelectorAll('.skill-item').forEach(item => {
 });
 
 // ==================== TYPING EFFECT (Optional Enhancement) ====================
-// Uncomment this section if you want a typing effect on the hero title
 /*
 const heroTitle = document.querySelector('.hero-title');
 const titleText = heroTitle.textContent;
@@ -161,18 +173,14 @@ function typeText() {
     }
 }
 
-// Start typing effect after page load
 window.addEventListener('load', () => {
     setTimeout(typeText, 500);
 });
 */
 
 // ==================== PARTICLES BACKGROUND (Optional Enhancement) ====================
-// You can add a particles.js or similar library for animated background
-// This is just a placeholder for where you'd initialize it
 
 // ==================== THEME TOGGLE (Optional Enhancement) ====================
-// Add this if you want dark/light mode toggle
 /*
 const themeToggle = document.createElement('button');
 themeToggle.classList.add('theme-toggle');
@@ -197,13 +205,11 @@ window.addEventListener('load', () => {
 });
 
 // ==================== PROJECT LINK TRACKING (Optional) ====================
-// Track clicks on project links for analytics
 document.querySelectorAll('.project-link').forEach(link => {
     link.addEventListener('click', (e) => {
         const projectTitle = link.closest('.project-item').querySelector('.project-title').textContent;
         const linkType = link.textContent.trim();
         console.log(`Project link clicked: ${projectTitle} - ${linkType}`);
-        // Here you would typically send this to an analytics service
     });
 });
 
@@ -221,19 +227,6 @@ formInputs.forEach(input => {
         }
     });
 });
-
-
-document.getElementById('contact-form').addEventListener('submit', function(event) {
-  event.preventDefault(); // prevent default form submission
-  emailjs.sendForm('service_voph2z4', 'Contact Us', this)
-    .then(function() {
-      alert('Message sent! ✅');
-      document.getElementById('contact-form').reset(); // clears the form
-    }, function(error) {
-      alert('Oops! Something went wrong. ❌', error);
-    });
-});
-
 
 // ==================== CONSOLE MESSAGE ====================
 console.log('%c👋 Welcome to my portfolio!', 'color: #c5f82a; font-size: 20px; font-weight: bold;');
