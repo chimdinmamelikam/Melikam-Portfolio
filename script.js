@@ -235,7 +235,6 @@ document.getElementById('contact-form').addEventListener('submit', function(even
 });
 
 
-
 // ==================== CONSOLE MESSAGE ====================
 console.log('%c👋 Welcome to my portfolio!', 'color: #c5f82a; font-size: 20px; font-weight: bold;');
 console.log('%cLooking to connect? Reach out at loismelikam@gmail.com', 'color: #888; font-size: 14px;');
