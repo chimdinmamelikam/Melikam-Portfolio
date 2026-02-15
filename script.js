@@ -8,7 +8,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 behavior: 'smooth',
                 block: 'start'
             });
-            
+
             // Close mobile menu if open
             navMenu.classList.remove('active');
             navToggle.classList.remove('active');
@@ -40,13 +40,13 @@ let lastScroll = 0;
 
 window.addEventListener('scroll', () => {
     const currentScroll = window.pageYOffset;
-    
+
     if (currentScroll > 100) {
         header.classList.add('scrolled');
     } else {
         header.classList.remove('scrolled');
     }
-    
+
     lastScroll = currentScroll;
 });
 
@@ -55,13 +55,13 @@ const sections = document.querySelectorAll('section[id]');
 
 function activateNavLink() {
     const scrollY = window.pageYOffset;
-    
+
     sections.forEach(section => {
         const sectionHeight = section.offsetHeight;
         const sectionTop = section.offsetTop - 100;
         const sectionId = section.getAttribute('id');
         const navLink = document.querySelector(`.nav-link[href="#${sectionId}"]`);
-        
+
         if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
             navLinks.forEach(link => link.classList.remove('active'));
             if (navLink) {
@@ -94,28 +94,29 @@ scrollTopBtn.addEventListener('click', () => {
 // ==================== CONTACT FORM HANDLING WITH EMAILJS ====================
 const contactForm = document.getElementById('contactForm');
 
-// Create a paragraph to show messages under the form
+// Create a paragraph element to display success/error messages
 let formMessage = document.createElement('p');
 formMessage.id = 'formMessage';
 formMessage.style.marginTop = '10px';
 contactForm.appendChild(formMessage);
 
 contactForm.addEventListener('submit', function(event) {
-    event.preventDefault(); // prevent default submission
+    event.preventDefault(); // prevent default form submission
 
-    // Basic validation
+    // Get form values
     const name = document.getElementById('name').value.trim();
     const email = document.getElementById('email').value.trim();
     const message = document.getElementById('message').value.trim();
 
+    // Basic validation
     if (!name || !email || !message) {
         formMessage.style.color = 'red';
         formMessage.textContent = 'Please fill in all fields.';
         return;
     }
 
-    // Send email with EmailJS
-    emailjs.sendForm('service_voph2z4', 'contact_us', this)
+    // Send the form using EmailJS
+    emailjs.sendForm('service_voph2z4', 'Contact Us', this) // Template name must match EmailJS exactly
         .then(function() {
             formMessage.style.color = 'green';
             formMessage.textContent = 'Message sent successfully! ✅';
@@ -220,7 +221,7 @@ formInputs.forEach(input => {
     input.addEventListener('focus', () => {
         input.parentElement.classList.add('focused');
     });
-    
+
     input.addEventListener('blur', () => {
         if (!input.value) {
             input.parentElement.classList.remove('focused');
