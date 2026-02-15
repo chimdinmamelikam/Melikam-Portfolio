@@ -222,6 +222,20 @@ formInputs.forEach(input => {
     });
 });
 
+
+document.getElementById('contact-form').addEventListener('submit', function(event) {
+  event.preventDefault(); // prevent default form submission
+  emailjs.sendForm('service_voph2z4', 'Contact Us', this)
+    .then(function() {
+      alert('Message sent! ✅');
+      document.getElementById('contact-form').reset(); // clears the form
+    }, function(error) {
+      alert('Oops! Something went wrong. ❌', error);
+    });
+});
+
+
+
 // ==================== CONSOLE MESSAGE ====================
 console.log('%c👋 Welcome to my portfolio!', 'color: #c5f82a; font-size: 20px; font-weight: bold;');
-console.log('%cLooking to connect? Reach out at robert.garcia@example.com', 'color: #888; font-size: 14px;');
+console.log('%cLooking to connect? Reach out at loismelikam@gmail.com', 'color: #888; font-size: 14px;');
