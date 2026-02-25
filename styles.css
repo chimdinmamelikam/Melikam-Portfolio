@@ -579,6 +579,23 @@ body {
     color: var(--primary-color);
 }
 
+
+.btn-submit {
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-submit:hover {
+    background-color: #c5f82a; /* highlight color */
+    color: #000;
+}
+
 /* ==================== FOOTER ==================== */
 .footer {
     background-color: var(--bg-dark);
