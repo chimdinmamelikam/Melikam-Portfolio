@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .thankyou-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .thankyou-wrapper h1 {
+            font-size: 2.3rem;
+            margin-bottom: 10px;
+            color: #fff;
+        }
+
+        .thankyou-wrapper p {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+            color: #444;
+        }
+
+        .back-btn {
+            padding: 12px 20px;
+            border: none;
+            background: #111827;
+            /* Same as your submit button color */
+            color: white;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: 0.3s ease;
+        }
+
+        .back-btn:hover {
+            background: #000;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="thankyou-wrapper">
+        <h1>Thank You!</h1>
+        <p>Your message has been sent successfully. I’ll get back to you shortly.</p>
+        <a href="index.html">
+            <button class="back-btn">Return Home</button>
+        </a>
+    </div>
+</body>
+</html>

@@ -321,29 +321,32 @@
         <div class="contact-content">
 
             <!-- Contact Form -->
-            <form action="https://formsubmit.co/loismelikam@gmail.com" method="POST" class="contact-form">
+<form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
 
-                <div class="form-group">
-                    <label for="name">Your Name</label>
-                    <input type="text" name="name" id="name" placeholder="Enter your name" required>
-                </div>
+    <!-- Web3Forms Access Key -->
+    <input type="hidden" name="access_key" value="bc635638-9a54-4404-a939-3611e43efb4c">
 
-                <div class="form-group">
-                    <label for="email">Your Email</label>
-                    <input type="email" name="email" id="email" placeholder="Enter your email" required>
-                </div>
+    <div class="form-group">
+        <label for="name">Your Name</label>
+        <input type="text" name="name" id="name" placeholder="Enter your name" required>
+    </div>
 
-                <div class="form-group">
-                    <label for="message">Message</label>
-                    <textarea name="message" id="message" placeholder="Write your message" required></textarea>
-                </div>
+    <div class="form-group">
+        <label for="email">Your Email</label>
+        <input type="email" name="email" id="email" placeholder="Enter your email" required>
+    </div>
 
-                <button type="submit" class="btn-submit">Send Message</button>
-<!-- Optional FormSubmit Settings -->
-                <input type="hidden" name="_captcha" value="false">
-                <input type="hidden" name="_next" value="https://chimdinmamelikam.vercel.app/thankyou.html">
-                
-            </form>
+    <div class="form-group">
+        <label for="message">Message</label>
+        <textarea name="message" id="message" placeholder="Write your message" required></textarea>
+    </div>
+
+    <button type="submit" class="btn-submit">Send Message</button>
+
+    <!-- Success Redirect (optional) -->
+    <input type="hidden" name="redirect" value="https://chimdinmamelikam.vercel.app/thankyou.html">
+
+</form>
 
             <!-- Contact Info -->
             <div class="contact-info">
